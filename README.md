@@ -1,5 +1,8 @@
 # Frontend Clean Architecture
 
+## Article on Clean Architecture for frontend
+[https://dev.to/bespoyasov/clean-architecture-on-frontend-4311](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
+
 ## Things to Consider
 
 There are a few compromises and simplifications in the code that are worth to be mentioned.
