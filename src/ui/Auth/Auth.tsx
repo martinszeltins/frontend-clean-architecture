@@ -15,22 +15,24 @@ export function Auth() {
 
     async function handleSubmit(event: React.FormEvent) {
         setLoading(true);
+
         event.preventDefault();
 
         await authenticate(name, email);
+
         setLoading(false);
     }
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={ styles.form } onSubmit={ handleSubmit }>
             <label>
                 <span>Your name:</span>
 
                 <input
                     type="text"
                     name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={ name }
+                    onChange={ (e) => setName(e.target.value) }
                     autoFocus
                 />
             </label>
@@ -41,13 +43,13 @@ export function Auth() {
                 <input
                     type="email"
                     name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={ email }
+                    onChange={ (e) => setEmail(e.target.value) }
                 />
             </label>
 
-            <button type="submit" disabled={loading}>
-                {loading ? "Login error..." : "Login"}
+            <button type="submit" disabled={ loading }>
+                { loading ? "Login error..." : "Login" }
             </button>
         </form>
     );
